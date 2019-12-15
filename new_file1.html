@@ -9,40 +9,30 @@
 				margin: 0px;
 			}
 		</style>
+		
 	</head>
 	<body>
-		<img src="img/图片2.png" style="position: absolute; height: 100%; margin-left: 700px;" />
+		<img src="img/图片2.png" style="position: absolute; height: 100%; margin-left: 35%;" />
 		<img height="500px" src="img/鞭炮.gif" style="position: absolute; left: 0px " />
 		<img height="500px" src="img/鞭炮.gif" style="position: absolute; right: 0px" />
-		<h1 style="font-size: 50px; position: absolute;bottom: 400px; left: 200px;">考研简单不要急</h1>
-		<h1 style="font-size: 50px;position: absolute;bottom: 300px; left: 200px;">还有几天来得及</h1>
-		<h1 style="font-size: 50px;position: absolute;bottom: 400px; right: 150px;">工商少你不得行</h1>
-		<h1 style="font-size: 50px;position: absolute;bottom: 300px; right: 150px;">烧烤帝国靠着你</h1>
-		<script>
-(function (doc, win) {
-    var docEl = doc.documentElement,
+		<h1 style="font-size: 50px; position: absolute;bottom: 40%; left: 5%;">考研简单不要急</h1>
+		<h1 style="font-size: 50px;position: absolute;bottom: 30%; left: 5%;">还有几天来得及</h1>
+		<h1 style="font-size: 50px;position: absolute;bottom: 40%; right: 5%;">工商少你不得行</h1>
+		<h1 style="font-size: 50px;position: absolute;bottom: 30%; right: 5%;">烧烤帝国靠着你</h1>
+		<script type="text/javascript">
+   (function (doc, win) {
+      var docEl = doc.documentElement,
         resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
         recalc = function () {
-            var clientWidth = docEl.clientWidth;
-            if (!clientWidth) return;
-            if(clientWidth>=640){
-              // 这里的640 取决于设计稿的宽度
-                docEl.style.fontSize = '100px';
-            }else{
-                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
-                 /*
-                    640   clientWidth
-                    100   x
-                  * 
-                  * */
-            }
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+          docEl.style.fontSize = 50 * (clientWidth / 320) + 'px';//其中“20”根据你设置的html的font-size属性值做适当的变化
         };
-
-    if (!doc.addEventListener) return;
-    win.addEventListener(resizeEvt, recalc, false);
-    doc.addEventListener('DOMContentLoaded', recalc, false);
-})(document, window);
-
+ 
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
 </script>
 	</body>
 </html>
