@@ -20,21 +20,23 @@
 		<h1 style="font-size: 50px;position: absolute;bottom: 400px; right: 150px;">工商少你不得行</h1>
 		<h1 style="font-size: 50px;position: absolute;bottom: 300px; right: 150px;">烧烤帝国靠着你</h1>
 		<script>
-    (function (doc, win) {
-        var docEl = doc.documentElement,
-                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-                recalc = function () {
-                    var clientWidth = docEl.clientWidth;
-                    if (!clientWidth) return;
-                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
-
-                };
-
-        if (!doc.addEventListener) return;
-        win.addEventListener(resizeEvt, recalc, false);
-        doc.addEventListener('DOMContentLoaded', recalc, false);
-    })(document, window);
-
+const pageResize = () => {
+  const docEle = document.documentElement;
+  const fn = () => {
+    const width = docEle.clientWidth > 750 ? 750 : docEle.clientWidth;
+    if (width) {
+      docEle.style.fontSize = 20 * (width / 375) + "px"
+    }
+  };
+  const timeFn = () => {
+    fn();
+    setTimeout(fn, 50);
+  };
+ 
+  window.addEventListener('resize', timeFn, false);
+  window.addEventListener('orientationchange', timeFn, false);
+  fn();
+};
 </script>
 	</body>
 </html>
