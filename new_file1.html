@@ -5,34 +5,42 @@
 		<title>您最牛皮!</title>
 		<style type="text/css">
 			*{
-				padding: 0px;
-				margin: 0px;
+				margin: 0;
+				padding: 0;
+			}
+			body,html{
+				width: 100%;
+				height: 100%;
+			}
+			#left{
+				width: 30%;
+				height: 100%;
+				text-align: center;
+				float: left;
+			}
+			#middle{
+				width: 40%;
+				height: 100%;
+				text-align: center;
+				float: left;
+			}
+			#right{
+				width: 30%;
+				height: 100%;
+				text-align: center;
+				float: left;
 			}
 		</style>
-		
 	</head>
 	<body>
-		<img src="img/图片2.png" style="position: absolute; height: 100%; margin-left: 35%;" />
-		<img height="500px" src="img/鞭炮.gif" style="position: absolute; left: 0px " />
-		<img height="500px" src="img/鞭炮.gif" style="position: absolute; right: 0px" />
-		<h1 style="font-size: 50px; position: absolute;bottom: 40%; left: 5%;">考研简单不要急</h1>
-		<h1 style="font-size: 50px;position: absolute;bottom: 30%; left: 5%;">还有几天来得及</h1>
-		<h1 style="font-size: 50px;position: absolute;bottom: 40%; right: 5%;">工商少你不得行</h1>
-		<h1 style="font-size: 50px;position: absolute;bottom: 30%; right: 5%;">烧烤帝国靠着你</h1>
-		<script type="text/javascript">
-   (function (doc, win) {
-      var docEl = doc.documentElement,
-        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-        recalc = function () {
-          var clientWidth = docEl.clientWidth;
-          if (!clientWidth) return;
-          docEl.style.fontSize = 50 * (clientWidth / 320) + 'px';//其中“20”根据你设置的html的font-size属性值做适当的变化
-        };
- 
-      if (!doc.addEventListener) return;
-      win.addEventListener(resizeEvt, recalc, false);
-      doc.addEventListener('DOMContentLoaded', recalc, false);
-    })(document, window);
-</script>
+		<div id="left"><img src="img/鞭炮.gif" height="40%" />
+		<h1>考研简单不要急</h1><br />
+		<h1>工商少你不得行</h1>
+		</div>
+		<div id="middle"><img src="img/图片2.png" height="100%"/></div>
+		<div id="right"><img src="img/鞭炮.gif" height="40%"/>
+		<h1>还有几天来得及</h1><br />
+		<h1>烧烤帝国靠着你</h1>
+		</div>
 	</body>
 </html>
